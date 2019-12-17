@@ -1,0 +1,8 @@
+{
+    "UserData" :
+    [
+        {"Name" : "Princesse", "Points" : "1234", "Role" : "Goulag"},
+        {"Name" : "MonAmiral", "Points" : "114", "Role" : "Mature"},
+        {"Name" : "Nizar", "Points" : "1988", "Role" : "Nizar"}
+    ]
+}

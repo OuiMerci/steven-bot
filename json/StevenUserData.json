@@ -1,0 +1,28 @@
+{
+  "pdj": {
+    "small": "bouboule jtm",
+    "big": "bouboule pd",
+    "sPoints": 5,
+    "bPoints": 10,
+    "hDelay": 20
+  },
+  "userData": [
+    {
+      "id": "Nizar",
+      "points": 15570
+    },
+    {
+      "id": "Princesse",
+      "points": 1234
+    },
+    {
+      "id": "160654356977287168",
+      "points": 190,
+      "lastPDJ": 1576505881106
+    },
+    {
+      "id": "MonAmiral",
+      "points": 114
+    }
+  ]
+}
