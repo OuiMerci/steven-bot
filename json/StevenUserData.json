@@ -1,14 +1,14 @@
 {
   "pdj": {
-    "small": "hahahoioioiooiiiddd",
+    "small": "pd",
     "big": "bouboule pd",
-    "smallAuthor": "PrincesseDuSeum",
+    "smallAuthor": "Ariksa",
     "bigAuthor": "StevenBot",
     "sPoints": 5,
     "bPoints": 10,
     "hDelay": 20,
     "lastSUpdate": 0,
-    "lastBUpdate": 1576828775842,
+    "lastBUpdate": 0,
     "updateDelay": 48,
     "lengthLimit": 40
   },
@@ -19,15 +19,15 @@
   "userData": [
     {
       "id": "160654356977287168",
-      "points": 30,
+      "points": 40,
       "username": "PrincesseDuSeum",
-      "lastPDJ": 0
+      "lastPDJ": 1576829135139
     },
     {
       "id": "306196372460273665",
-      "points": 30,
+      "points": 40,
       "username": "Toolmoon",
-      "lastPDJ": 1576753311680
+      "lastPDJ": 1576829086793
     },
     {
       "id": "141938006033563648",
@@ -36,22 +36,28 @@
       "lastPDJ": 1576759282343
     },
     {
+      "id": "619139678242734111",
+      "points": 25,
+      "username": "Nini",
+      "lastPDJ": 1576831307797
+    },
+    {
+      "id": "324679000117215232",
+      "points": 20,
+      "username": "Aryksa",
+      "lastPDJ": 1576831282094
+    },
+    {
+      "id": "289678995811991552",
+      "points": 20,
+      "username": "MonAmiral",
+      "lastPDJ": 1576831347925
+    },
+    {
       "id": "227393970626363392",
       "points": 15,
       "username": "Shas'Oren",
       "lastPDJ": 1576763681018
-    },
-    {
-      "id": "619139678242734111",
-      "points": 15,
-      "username": "Nini",
-      "lastPDJ": 1576759219824
-    },
-    {
-      "id": "324679000117215232",
-      "points": 10,
-      "username": "Aryksa",
-      "lastPDJ": 1576759151147
     },
     {
       "id": "314112874471751683",
@@ -60,16 +66,10 @@
       "lastPDJ": 1576612722147
     },
     {
-      "id": "289678995811991552",
-      "points": 10,
-      "username": "MonAmiral",
-      "lastPDJ": 1576759104364
-    },
-    {
       "id": "555732649243705384",
-      "points": 5,
+      "points": 10,
       "username": "LaureBot",
-      "lastPDJ": 1576661820658
+      "lastPDJ": 1576832364462
     },
     {
       "id": "461265486655520788",
