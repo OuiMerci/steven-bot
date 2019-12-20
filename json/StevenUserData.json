@@ -7,8 +7,8 @@
     "sPoints": 5,
     "bPoints": 10,
     "hDelay": 20,
-    "lastSUpdate": 0,
-    "lastBUpdate": 1576834933279,
+    "lastSUpdate": 1576838514650,
+    "lastBUpdate": 1576838514650,
     "updateDelay": 48,
     "lengthLimit": 40
   },
@@ -42,6 +42,12 @@
       "lastPDJ": 1576831307797
     },
     {
+      "id": "227393970626363392",
+      "points": 25,
+      "username": "Shas'Oren",
+      "lastPDJ": 1576839028936
+    },
+    {
       "id": "324679000117215232",
       "points": 20,
       "username": "Aryksa",
@@ -52,12 +58,6 @@
       "points": 20,
       "username": "MonAmiral",
       "lastPDJ": 1576831347925
-    },
-    {
-      "id": "227393970626363392",
-      "points": 15,
-      "username": "Shas'Oren",
-      "lastPDJ": 1576763681018
     },
     {
       "id": "314112874471751683",
