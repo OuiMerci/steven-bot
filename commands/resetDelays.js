@@ -5,6 +5,13 @@ module.exports = {
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
+
+        if(msg.author.id != '160654356977287168')
+        {
+            msg.reply("Sacripan, tu ne peux pas utiliser cette commande !");
+            return;
+        }
+
         stevenBot.saved.pdj.lastBUpdate = 0;
         stevenBot.saved.pdj.lastSUpdate = 0;
 
