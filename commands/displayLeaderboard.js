@@ -1,31 +1,34 @@
-module.exports = {
+﻿module.exports = {
     visible : true,
 	name: 'leaderboard',
     description: 'Affiche le leaderboard',
     argsHelp : 'Utiliser "leaderboard all" affiche le leaderboard complet',
 
 	execute(msg, args, stevenBot) {
-        console.log("arg steven : " + stevenBot);
         console.log(`Printing leaderboard`);
-        stevenBot.SortUsersByPoints();
+        stevenBot.userMap = stevenBot.utils.SortUsersByPoints(stevenBot.userMap);
         var answer = "Voilà le classement :\n";
 
-        if(args === 'all')
+        var keys = Array.from(stevenBot.userMap.keys());
+
+        console.log(keys);
+
+        if(args == 'all')
         {
-            for(var i = 0; i < stevenBot.userData.length; i++)
+            for(var i = 0; i < keys.length; i++)
             {
-                var user = stevenBot.userData[i];
-                var newLine = user.Name + " : " + user.Points + " points and is " + "***" + "\n" ;
+                var user = stevenBot.userMap.get(keys[i]);
+                var newLine = user.username + " : " + user.points + " points" + "\n" ;
                 answer = answer.concat(newLine);
             }
         }
         else
         {
-            var maxCount = Math.min(stevenBot.userData.length, 4);
+            var maxCount = Math.min(keys.length, 4);
             for(var i = 0; i < maxCount; i++)
             {
-                var user = stevenBot.userData[i];
-                var newLine = user.Name + " : " + user.Points + " points\n" ;
+                var user = stevenBot.userMap.get(keys[i]);
+                var newLine = user.username + " : " + user.points + " points" + "\n" ;
                 answer = answer.concat(newLine);
             }
         }

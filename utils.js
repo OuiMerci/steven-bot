@@ -5,8 +5,17 @@ module.exports = {
         user.points += amount;
 
         if(channel)
-            stevenBot.server.fetchMember(userId)
-                .then(member => channel.send("Voilà " + amount + " points pour toi, " + member.user.username));
+            channel.send("Voilà " + amount + " points pour toi, " + user.username);
+
+        this.SortAndSave(stevenBot);
+    },
+
+    Pay : function(userId, amount, stevenBot, channel){
+        user = stevenBot.userMap.get(userId);
+        user.points -= amount;
+
+        if(channel)
+            channel.send("Paiement bien reçu : " + amount + " - " + user.username);
 
         this.SortAndSave(stevenBot);
     },
@@ -20,6 +29,8 @@ module.exports = {
 
     SortUsersByPoints : function (userMap){
         console.log("Sorting users");
-        return userMap.sort((a, b) => b.points - a.points);
+        var ordered = userMap.sort((a, b) => b.points - a.points);
+        console.log(ordered);
+        return ordered;
     }
 };

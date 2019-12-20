@@ -8,9 +8,6 @@ module.exports = {
 
         var channelId = args.shift();
         var channel = stevenBot.server.channels.get(channelId);
-
-        console.log("arg 2 : " + args);
-        console.log("arg length : " + args.length);
         
         var message = '';
 

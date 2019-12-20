@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const {prefix, token} = require('./json/config.json');
@@ -25,7 +25,7 @@ function Init()
     // Set Presence
     client.user.setPresence({
         game: {
-            name: 'FURI',
+            name: 'Haven',
             type: 1,
         },
         status: 'dnd'
@@ -83,7 +83,7 @@ function LoadSteven()
     // Add pierre
     var callback = function(user) {stevenBot.pierre = user;}
     client.fetchUser('160654356977287168')
-                    .then(user => {user.send("Salut, c'est bien init !"); callback(user);});
+                    .then(user => {callback(user);});
 
     // Save client
     stevenBot.client = client;
@@ -93,7 +93,7 @@ function HandleMessage(msg){
 
     if(msg.author === client.user)
     {
-        console.log("I shouldn't react to my own message !!");
+        //console.log("I shouldn't react to my own message !!");
         return;
     }
 
@@ -134,7 +134,7 @@ function CheckForCommand(msg, messageToLowerCase)
     const args = messageToLowerCase.slice(prefix.length).split(/ +/);
     const command = args.shift();
 
-    console.log("test command : " + command);
+    //console.log("test command : " + command);
 
     if (!stevenBot.commands.has(command)) return;
 
@@ -164,6 +164,6 @@ function CheckForTrigger(msg, lowerCaseMessage)
             return;
         }
     }
-    console.log("No trigger found in " + lowerCaseMessage);
+    //console.log("No trigger found in " + lowerCaseMessage);
 }
 

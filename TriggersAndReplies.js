@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
     CheckPDJ : function (userId, msg, steven){
         // if author is not registered, ignore
         if(steven.userMap.has(userId) == false) return;
@@ -23,8 +23,7 @@ module.exports = {
         }
 
         // Check delay
-        console.log("user");
-        console.log(user);
+
         var msDelay = pdj.hDelay * 60 * 60 * 1000;
         if ("lastPDJ" in user)
         {

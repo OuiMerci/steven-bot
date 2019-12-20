@@ -20,9 +20,16 @@ module.exports = {
             return;
         }
 
-        var userData = {id : msg.member.id, points : 0};
-        stevenBot.userMap.set(msg.member.id, userData);
-        msg.reply(" nous a rejoint pour le grand jeu de l'excellence !");
-        stevenBot.utils.SortAndSave(stevenBot);
+        var callback = function(user)
+        {
+            console.log("username = " + user.username);
+            var userData = {id : msg.author.id, points : 0, username : user.username};
+            stevenBot.userMap.set(msg.author.id, userData);
+            msg.reply(" nous a rejoint pour le grand jeu de l'excellence !");
+            stevenBot.utils.SortAndSave(stevenBot);
+        }
+
+        stevenBot.client.fetchUser(msg.author.id)
+                .then(user => callback(user));
 	},
 };
