@@ -5,8 +5,8 @@ module.exports = {
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
-        stevenBot.saved.pdj.lastBUpdate = Date.now();
-        stevenBot.saved.pdj.lastSUpdate = Date.now();
+        stevenBot.saved.pdj.lastBUpdate = 0;
+        stevenBot.saved.pdj.lastSUpdate = 0;
 
         stevenBot.utils.SortAndSave(stevenBot);
         msg.reply(" les délais ont été reset !");
