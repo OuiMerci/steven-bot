@@ -38,8 +38,8 @@ module.exports = {
             return;
         }
 
-        pdj.small = message;
-        pdj.smallAuthor = user.username;
+        pdj.big = message;
+        pdj.bigAuthor = user.username;
         pdj.lastBUpdate = Date.now();
         stevenBot.saved.pdj = pdj;
 
