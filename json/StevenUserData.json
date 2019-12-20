@@ -1,14 +1,14 @@
 {
   "pdj": {
-    "small": "pd",
+    "small": "ok , objectivement frozen > mulan",
     "big": "bouboule pd",
-    "smallAuthor": "Ariksa",
+    "smallAuthor": "PrincesseDuSeum",
     "bigAuthor": "StevenBot",
     "sPoints": 5,
     "bPoints": 10,
     "hDelay": 20,
     "lastSUpdate": 0,
-    "lastBUpdate": 0,
+    "lastBUpdate": 1576834933279,
     "updateDelay": 48,
     "lengthLimit": 40
   },
@@ -31,9 +31,9 @@
     },
     {
       "id": "141938006033563648",
-      "points": 30,
+      "points": 40,
       "username": "Nizar",
-      "lastPDJ": 1576759282343
+      "lastPDJ": 1576832568637
     },
     {
       "id": "619139678242734111",
