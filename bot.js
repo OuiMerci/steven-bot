@@ -10,8 +10,6 @@ client.once('ready', () => {
     Init();
 
     console.log(`Logged in as ${client.user.tag}!`);
-    var textChannel = Array.from(client.channels.values())[2];
-    textChannel.send("Hey ! Comment ça va les gars ?");
 });
 
 client.on('message', msg => {

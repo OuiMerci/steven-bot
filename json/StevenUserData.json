@@ -1,12 +1,16 @@
 {
   "pdj": {
-    "small": "pd",
+    "small": "hahahoioioiooiiiddd",
     "big": "bouboule pd",
-    "smallAuthor": "Aryksa",
+    "smallAuthor": "PrincesseDuSeum",
     "bigAuthor": "StevenBot",
     "sPoints": 5,
     "bPoints": 10,
-    "hDelay": 20
+    "hDelay": 20,
+    "lastSUpdate": 0,
+    "lastBUpdate": 1576828775842,
+    "updateDelay": 48,
+    "lengthLimit": 40
   },
   "boutique": {
     "nouvellePDJ5": 15,
@@ -17,7 +21,7 @@
       "id": "160654356977287168",
       "points": 30,
       "username": "PrincesseDuSeum",
-      "lastPDJ": 1576777246106
+      "lastPDJ": 0
     },
     {
       "id": "306196372460273665",

@@ -5,6 +5,8 @@ module.exports = {
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
+        var pdj = stevenBot.saved.pdj;
+
         if(stevenBot.userMap.has(msg.author.id) == false)
         {
             msg.reply("Tu ne joues pas ! Utiliser la commande 'ajoute-moi' pour nous rejoindre !");
@@ -19,6 +21,9 @@ module.exports = {
             return;
         }
 
+        var delayOk = stevenBot.utils.CheckDelay(pdj.lastBUpdate, pdj.updateDelay, msg);
+        if(delayOk == false) { return; }
+
         var message = "";
         args.forEach(word => {
             if(message != "")
@@ -27,14 +32,17 @@ module.exports = {
                 message += word;
         });
 
-        if(message.length > 25)
+        if(message.length > pdj.lengthLimit)
         {
             msg.reply("Ta phrase est trop longue !");
             return;
         }
 
-        stevenBot.saved.pdj.big = message;
-        stevenBot.saved.pdj.bigAuthor = user.username;
+        pdj.small = message;
+        pdj.smallAuthor = user.username;
+        pdj.lastBUpdate = Date.now();
+        stevenBot.saved.pdj = pdj;
+
         stevenBot.utils.Pay(msg.author.id, stevenBot.saved.boutique.nouvellePDJ10, stevenBot, msg.channel);
         msg.channel.send(user.username + " a choisi la nouvelle phrase du jour a "
                         + stevenBot.saved.pdj.bPoints + " points : " + message);

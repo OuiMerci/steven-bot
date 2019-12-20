@@ -23,28 +23,8 @@
         }
 
         // Check delay
-
-        var msDelay = pdj.hDelay * 60 * 60 * 1000;
-        if ("lastPDJ" in user)
-        {
-            var diff = Date.now() - user.lastPDJ;
-            if(diff < msDelay)
-            {
-                // On calcule le nb d'heures restant
-                var toWait = Math.round((msDelay - diff) / 1000.0 / 60.0 / 60.0);
-
-                // on check le pluriel
-                var pluriel = "";
-                if(toWait >= 2) {pluriel = "s"}
-
-                msg.reply("c'est trop tôt pour toi ! Attends encore environ " + toWait + " heure" + pluriel);
-                return;
-            }
-        }
-        else
-        {
-            console.log(" NO PDJ --> adding");
-        }
+        var delayOk = steven.utils.CheckDelay(user.lastPDJ, pdj.hDelay, msg);
+        if(delayOk == false) { return; }
 
         user["lastPDJ"] = Date.now();
         steven.utils.AddPoints(userId, pointsToAdd, steven, msg.channel);

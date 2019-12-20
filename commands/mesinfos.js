@@ -9,7 +9,7 @@ module.exports = {
 
         if(stevenBot.userMap.has(msg.author.id) == false)
         {
-            msg.reply("Tu en joues pas ! Utilises la commande 'ajoute-moi'");
+            msg.reply("Tu ne joues pas ! Utilises la commande 'ajoute-moi'");
             return;
         }
 
