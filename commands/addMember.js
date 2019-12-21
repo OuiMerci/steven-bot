@@ -27,6 +27,11 @@ module.exports = {
             stevenBot.userMap.set(msg.author.id, userData);
             msg.reply(" nous a rejoint pour le grand jeu de l'excellence !");
             stevenBot.utils.SortAndSave(stevenBot);
+
+            if(stevenBot.utils.CheckRandom(2))
+            {
+                stevenBot.laureRoulette.Ask(msg, stevenBot);
+            }
         }
 
         stevenBot.client.fetchUser(msg.author.id)

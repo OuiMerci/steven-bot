@@ -46,5 +46,10 @@ module.exports = {
         stevenBot.utils.Pay(msg.author.id, stevenBot.saved.boutique.nouvellePDJ10, stevenBot, msg.channel);
         msg.channel.send(user.username + " a choisi la nouvelle phrase du jour a "
                         + stevenBot.saved.pdj.bPoints + " points : " + message);
+
+        if(stevenBot.utils.CheckRandom(15))
+        {
+            stevenBot.laureRoulette.Ask(msg, stevenBot);
+        }
 	},
 };

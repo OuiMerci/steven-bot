@@ -54,6 +54,7 @@ function LoadSteven()
     var triggers = require('./TriggersAndReplies.js');
     stevenBot.messagesAndReplies = triggers.TriggersAndRepliesDic;
     stevenBot.CheckPDJ = triggers.CheckPDJ;
+    stevenBot.laureRoulette = require('./laureRoulette.js');
 
     // Load data
     stevenBot.saved = stevenBot.data.ReadFromFile();
@@ -96,6 +97,12 @@ function HandleMessage(msg){
     }
 
     var lowerCaseMessage = msg.content.toLowerCase();
+
+    if(msg.author.id == 555732649243705384)
+    {
+        console.log("Calling check answer laureRoulette");
+        stevenBot.laureRoulette.CheckAnswer(lowerCaseMessage, msg);
+    }
     
     if(msg.channel.type === 'dm')
     {
@@ -115,10 +122,21 @@ function HandleMessage(msg){
 function HandleDm(msg, lowerCaseMessage){
     if(msg.author.id != 160654356977287168)
     {
+        console.log("id is : " + msg.author.id);
         stevenBot.pierre.send(msg.author.username + " a envoyé : \n" + msg.content);
         stevenBot.lastDmUser = msg.author;
     }
     else{
+        // if(msg.content == 'testlaure')
+        // {
+        //     console.log("Calling Ask laureRoulette");
+        //     stevenBot.laureRoulette.Ask(msg, '160654356977287168', stevenBot);
+        // }
+        // else{
+        //     console.log("Calling check answer laureRoulette");
+        //     stevenBot.laureRoulette.CheckAnswer(lowerCaseMessage, msg);
+        // }
+
         lowerCaseMessage = "steven " + lowerCaseMessage;
         CheckForCommand(msg, lowerCaseMessage);
     }

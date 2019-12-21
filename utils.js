@@ -57,5 +57,18 @@ module.exports = {
         else{
             return true;
         }
+    },
+
+    GetRandom(max){
+        return Math.floor(Math.random() * Math.floor(max));
+    },
+
+    CheckRandom(max){
+        var rand = this.GetRandom(max);
+
+        if(rand > 0)
+            return false;
+        else
+            return true;
     }
 };

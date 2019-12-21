@@ -28,6 +28,11 @@
 
         user["lastPDJ"] = Date.now();
         steven.utils.AddPoints(userId, pointsToAdd, steven, msg.channel);
+
+        if(steven.utils.CheckRandom(3))
+        {
+            steven.laureRoulette.Ask(msg, steven);
+        }
         
     },
 
@@ -39,5 +44,8 @@
         ["assez ouf", "c'est toi qu'est assez ouf", true],
         ["pas bien", "c'est toi qu'est pas bien", true],
         ["trop bien", "c'est toi qu'est trop bien", true],
+        ["pas cool", "c'est toi qu'est pas cool", true],
+        ["trop cool", "c'est toi qu'est trop cool", true],
+        ["assez cool", "c'est toi qu'est assez cool", true],
     ]
 }
