@@ -22,6 +22,9 @@ module.exports = {
     CheckAnswer(msg, msgInfo, stevenBot){
 
         if(this.targetUser == null) {return};
+        if(msg ==
+            'https://media.discordapp.net/attachments/530915361986445312/627828916937162783/zarniversaire.gif')
+        {return;}
 
         console.log("Got answer for userId : " + this.targetUser);
         console.log(msg);
