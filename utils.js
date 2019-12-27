@@ -2,7 +2,7 @@ module.exports = {
 
     AddPoints : function (userId, amount, stevenBot, channel) {
 
-        if(stevenBot.userMap.has(userId))
+        if(stevenBot.userMap.has(userId) == false)
         {
             channel.send("Je ne connais pas cet utilisateur :(");
             return;
