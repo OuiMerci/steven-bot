@@ -11,8 +11,6 @@
 
         var keys = Array.from(stevenBot.userMap.keys());
 
-        console.log(keys);
-
         if(args == 'all')
         {
             for(var i = 0; i < keys.length; i++)
