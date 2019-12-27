@@ -1,6 +1,13 @@
 module.exports = {
 
     AddPoints : function (userId, amount, stevenBot, channel) {
+
+        if(stevenBot.userMap.has(userId))
+        {
+            channel.send("Je ne connais pas cet utilisateur :(");
+            return;
+        }
+
         user = stevenBot.userMap.get(userId);
         user.points += amount;
 
@@ -13,6 +20,9 @@ module.exports = {
     Pay : function(userId, amount, stevenBot, channel){
         user = stevenBot.userMap.get(userId);
         user.points -= amount;
+
+        if(user.points < 0)
+            user.points = 0;
 
         if(channel)
             channel.send("Paiement bien reçu : " + amount + " - " + user.username);
