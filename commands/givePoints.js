@@ -13,7 +13,7 @@ module.exports = {
 
         var amount = Number(args.shift());
 
-        var userId = args.shift() + "";
+        var userId = args.shift();
 
         if(userId == "" || userId == 'undefined')
             stevenBot.utils.AddPoints(msg.author.id, amount, stevenBot, msg.channel);
