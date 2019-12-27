@@ -1,7 +1,7 @@
 module.exports = {
     visible: false,
-	name: 'donne',
-    description: "Donne des points",
+	name: 'prend',
+    description: "Retire des points",
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
@@ -16,8 +16,8 @@ module.exports = {
         var userId = args.shift() + "";
 
         if(userId == "" || userId == 'undefined')
-            stevenBot.utils.AddPoints(msg.author.id, amount, stevenBot, msg.channel);
+            stevenBot.utils.Pay(msg.author.id, amount, stevenBot, msg.channel);
         else
-            stevenBot.utils.AddPoints(userId, amount, stevenBot, msg.channel);
+            stevenBot.utils.Pay(userId, amount, stevenBot, msg.channel);
 	},
 };
