@@ -1,6 +1,6 @@
 module.exports = {
     visible: false,
-	name: 'prend',
+	name: 'prends',
     description: "Retire des points",
     argsHelp : '',
 
