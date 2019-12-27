@@ -15,6 +15,8 @@ module.exports = {
 
         var userId = args.shift();
 
+        console.log("uid" + userId);
+
         if(userId == "" || userId == 'undefined')
             stevenBot.utils.AddPoints(msg.author.id, amount, stevenBot, msg.channel);
         else
