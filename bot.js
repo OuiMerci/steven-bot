@@ -101,7 +101,7 @@ function HandleMessage(msg){
     if(msg.author.id == 555732649243705384)
     {
         console.log("Calling check answer laureRoulette");
-        stevenBot.laureRoulette.CheckAnswer(lowerCaseMessage, msg);
+        stevenBot.laureRoulette.CheckAnswer(lowerCaseMessage, msg, stevenBot);
     }
     
     if(msg.channel.type === 'dm')
@@ -127,16 +127,6 @@ function HandleDm(msg, lowerCaseMessage){
         stevenBot.lastDmUser = msg.author;
     }
     else{
-        // if(msg.content == 'testlaure')
-        // {
-        //     console.log("Calling Ask laureRoulette");
-        //     stevenBot.laureRoulette.Ask(msg, '160654356977287168', stevenBot);
-        // }
-        // else{
-        //     console.log("Calling check answer laureRoulette");
-        //     stevenBot.laureRoulette.CheckAnswer(lowerCaseMessage, msg);
-        // }
-
         lowerCaseMessage = "steven " + lowerCaseMessage;
         CheckForCommand(msg, lowerCaseMessage);
     }
