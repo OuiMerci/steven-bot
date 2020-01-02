@@ -33,17 +33,17 @@ module.exports = {
         {
             case 'certainement !' :
                 msgInfo.channel.send("Cool !");
-                stevenBot.utils.AddPoints(msgInfo.author.id, 20, stevenBot, msgInfo.channel);
+                stevenBot.utils.AddPoints(this.targetUser, 20, stevenBot, msgInfo.channel);
                 break;
 
             case 'sûrement !' :
                 msgInfo.channel.send("Hum, Ok !");
-                stevenBot.utils.AddPoints(msgInfo.author.id, 15, stevenBot, msgInfo.channel);
+                stevenBot.utils.AddPoints(this.targetUser, 15, stevenBot, msgInfo.channel);
                 break;
 
             case 'peut-être.' :
                 msgInfo.channel.send("Hum...");
-                stevenBot.utils.AddPoints(msgInfo.author.id, 1, stevenBot, msgInfo.channel);
+                stevenBot.utils.AddPoints(this.targetUser, 1, stevenBot, msgInfo.channel);
                 break;
 
             case 'absolument pas.' :
@@ -56,7 +56,7 @@ module.exports = {
 
             case 'oui.' :
                 msgInfo.channel.send("Ok !");
-                stevenBot.utils.AddPoints(msgInfo.author.id, 15, stevenBot, msgInfo.channel);
+                stevenBot.utils.AddPoints(this.targetUser, 15, stevenBot, msgInfo.channel);
                 break;
 
             case 'Ce n\'est pas possible.' :
@@ -65,7 +65,7 @@ module.exports = {
 
             case 'je suis très occupée, vous pouvez demander à Erwan peut-être ?' :
                 msgInfo.channel.send("Vas-y, elle m'a gavé..");
-                stevenBot.utils.AddPoints(msgInfo.author.id, 30, stevenBot, msgInfo.channel);
+                stevenBot.utils.AddPoints(this.targetUser, 30, stevenBot, msgInfo.channel);
                 break;
         }
 
