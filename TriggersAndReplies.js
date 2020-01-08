@@ -39,7 +39,7 @@
     TriggersAndRepliesDic : [
         ["salut steven", "Salut mec !", false],
         ["bye", "bye mec !", false],
-        ["top", "c'est toi qu'est top", true],
+        [" top", "c'est toi qu'est top", true],
         ["pas ouf", "c'est toi qu'est pas ouf", true],
         ["assez ouf", "c'est toi qu'est assez ouf", true],
         ["pas bien", "c'est toi qu'est pas bien", true],

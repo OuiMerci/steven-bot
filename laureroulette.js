@@ -14,9 +14,15 @@ module.exports = {
             { console.log("Ask - error finding user " + msg.author.id);}
 
         this.targetUser = msg.author.id;
-        var rand = stevenBot.utils.GetRandom(99999999);
+        var rand = stevenBot.utils.GetRandom(11);
+        var randTxt = "";
+        for(var i = 0; i <= rand; i++)
+        {
+            rand += "x";
+        }
+
         msg.channel.send("Laure est-ce que je dois donner des points à "
-                + user.username + " (" + rand + ")" + " ?");
+                + user.username + " (" + randTxt + ")" + " ?");
     },
     
     CheckAnswer(msg, msgInfo, stevenBot){
