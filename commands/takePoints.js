@@ -15,9 +15,7 @@ module.exports = {
 
         var userId = args.shift();
 
-        console.debug("UserId = " + userId);
-
-        if(userId == "" || userId == 'undefined')
+        if(userId == "" || userId === undefined)
             stevenBot.utils.Pay(msg.author.id, amount, stevenBot, msg.channel);
         else
             stevenBot.utils.Pay(userId, amount, stevenBot, msg.channel);

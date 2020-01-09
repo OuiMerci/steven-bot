@@ -24,7 +24,7 @@ module.exports = {
         if(stevenBot.userMap.has(userId) == false)
         {
             channel.send("Je ne connais pas cet utilisateur :(");
-            console.debug("UserId = " + userId);
+            console.debug("Inside userId = " + userId);
             return;
         }
 

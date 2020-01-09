@@ -16,9 +16,7 @@ module.exports = {
 
         var userId = args.shift();
 
-        console.debug("UserId = " + userId);
-
-        if(userId == "" || userId == 'undefined')
+        if(userId == "" || userId === undefined)
             stevenBot.laureRoulette.Ask(msg, stevenBot, msg.author.id);
         else
             stevenBot.laureRoulette.Ask(msg, stevenBot, userId);
