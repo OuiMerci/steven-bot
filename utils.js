@@ -5,6 +5,7 @@ module.exports = {
         if(stevenBot.userMap.has(userId) == false)
         {
             channel.send("Je ne connais pas cet utilisateur :(");
+            console.debug("UserId = " + userId);
             return;
         }
 
@@ -13,11 +14,20 @@ module.exports = {
 
         if(channel)
             channel.send("Voilà " + amount + " points pour toi, " + user.username);
+            console.debug("UserId = " + userId);
 
         this.SortAndSave(stevenBot);
     },
 
     Pay : function(userId, amount, stevenBot, channel){
+
+        if(stevenBot.userMap.has(userId) == false)
+        {
+            channel.send("Je ne connais pas cet utilisateur :(");
+            console.debug("UserId = " + userId);
+            return;
+        }
+
         user = stevenBot.userMap.get(userId);
         user.points -= amount;
 
