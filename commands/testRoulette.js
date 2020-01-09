@@ -12,12 +12,13 @@ module.exports = {
             return;
         }
 
-        var amount = Number(args.shift());
-
         var userId = args.shift();
 
         if(userId == "" || userId === undefined)
+        {
+            msg.reply("user id : " + userId + " inconnu, je fais pour PdS");
             stevenBot.laureRoulette.Ask(msg, stevenBot, msg.author.id);
+        }
         else
             stevenBot.laureRoulette.Ask(msg, stevenBot, userId);
 	},

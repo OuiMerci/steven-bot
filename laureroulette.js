@@ -14,12 +14,8 @@ module.exports = {
             { console.log("Je n'ai pas trouvé ce joueur pour la roulette " + userId); return;}
 
         this.targetUser = userId;
-        var rand = stevenBot.utils.GetRandom(11);
-        var randTxt = "";
-        for(var i = 0; i <= rand; i++)
-        {
-            randTxt += "x";
-        }
+        var rand = stevenBot.utils.GetRandom(10);
+        var randTxt = this.GetRandomWord(rand);
 
         msg.channel.send("Laure est-ce que je dois donner des points à "
                 + user.username + " (" + randTxt + ")" + " ?");
@@ -76,5 +72,45 @@ module.exports = {
         }
 
         this.targetUser = null;
+    },
+
+    GetRandomWord(rand)
+    {
+        switch(rand)
+        {
+            case 0 : 
+                return "";
+
+            case 1 :
+                return "x";
+            
+            case 2 :
+                return "MA";
+
+            case 3 :
+                return "Tom";
+
+            case 4 :
+                return "Nini";
+            break;
+
+            case 5 :
+                return "Nizar";
+
+            case 6 :
+                return "Nathan";
+
+            case 7 :
+                return "Jéromme";
+
+            case 8 :
+                return "Toolmoon";
+
+            case 9 :
+                return "Casalinni";
+            
+            default : 
+                return "Si ce texte apparait, Pierre a merdé";
+        }
     }
 };
