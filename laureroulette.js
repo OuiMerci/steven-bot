@@ -6,19 +6,19 @@ module.exports = {
 
     targetUser : null,
 
-	Ask(msg, stevenBot) {
-        console.log("Asking laure roulette for " + msg.author.id);
+	Ask(msg, stevenBot, userId) {
+        console.log("Asking laure roulette for " + userId);
 
-        var user = stevenBot.userMap.get(msg.author.id);
+        var user = stevenBot.userMap.get(userId);
         if(user == undefined)
-            { console.log("Ask - error finding user " + msg.author.id);}
+            { console.log("Je n'ai pas trouvé ce joueur pour la roulette " + userId); return;}
 
-        this.targetUser = msg.author.id;
+        this.targetUser = userId;
         var rand = stevenBot.utils.GetRandom(11);
         var randTxt = "";
         for(var i = 0; i <= rand; i++)
         {
-            rand += "x";
+            randTxt += "x";
         }
 
         msg.channel.send("Laure est-ce que je dois donner des points à "

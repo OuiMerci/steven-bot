@@ -1,7 +1,8 @@
+
 module.exports = {
-    visible: false,
-	name: 'donne',
-    description: "Donne des points",
+    visible : false,
+	name: 'roulette',
+    description: 'Test la roulette',
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
@@ -18,8 +19,8 @@ module.exports = {
         console.debug("UserId = " + userId);
 
         if(userId == "" || userId == 'undefined')
-            stevenBot.utils.AddPoints(msg.author.id, amount, stevenBot, msg.channel);
+            stevenBot.laureRoulette.Ask(msg, stevenBot, msg.author.id);
         else
-            stevenBot.utils.AddPoints(userId, amount, stevenBot, msg.channel);
+            stevenBot.laureRoulette.Ask(msg, stevenBot, userId);
 	},
 };

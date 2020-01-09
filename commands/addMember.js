@@ -6,19 +6,20 @@ module.exports = {
     argsHelp : '',
 
 	execute(msg, args, stevenBot) {
-        console.log("arg steven : " + stevenBot);
-        console.log(`Let's add user : ` + msg.author);
+        if(msg.author.id != '160654356977287168')
+        {
+            msg.reply("Sacripan, tu ne peux pas utiliser cette commande !");
+            return;
+        }
 
-        if(stevenBot.userMap.has(msg.author.id))
-        {
-            msg.reply("Tu joues déjà !");
-            return;
-        }
-        else if (msg.member && msg.member.deleted)
-        {
-            msg.channel.send("Euh... tu ne fais plus partie de ce serveur... ? ... ... ?");
-            return;
-        }
+        var amount = Number(args.shift());
+
+        var userId = args.shift();
+
+        if(userId == "" || userId == 'undefined')
+            stevenBot.utils.AddPoints(msg.author.id, amount, stevenBot, msg.channel);
+        else
+            stevenBot.utils.AddPoints(userId, amount, stevenBot, msg.channel);
 
         var callback = function(user)
         {

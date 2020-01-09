@@ -47,5 +47,6 @@
         ["pas cool", "c'est toi qu'est pas cool", true],
         ["trop cool", "c'est toi qu'est trop cool", true],
         ["assez cool", "c'est toi qu'est assez cool", true],
+        [" bim ", "bam boum", false],
     ]
 }
