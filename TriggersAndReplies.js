@@ -39,14 +39,14 @@
     TriggersAndRepliesDic : [
         ["salut steven", "Salut mec !", false],
         ["bye", "bye mec !", false],
-        [" top", "c'est toi qu'est top", true],
-        ["pas ouf", "c'est toi qu'est pas ouf", true],
-        ["assez ouf", "c'est toi qu'est assez ouf", true],
+        //[" top", "c'est toi qu'est top", true],
+        //["pas ouf", "c'est toi qu'est pas ouf", true],
+        //["assez ouf", "c'est toi qu'est assez ouf", true],
         ["pas bien", "c'est toi qu'est pas bien", true],
-        ["trop bien", "c'est toi qu'est trop bien", true],
+        //["trop bien", "c'est toi qu'est trop bien", true],
         ["pas cool", "c'est toi qu'est pas cool", true],
-        ["trop cool", "c'est toi qu'est trop cool", true],
+        //["trop cool", "c'est toi qu'est trop cool", true],
         ["assez cool", "c'est toi qu'est assez cool", true],
-        [" bim ", "bam boum", false],
+        ["bim ", "bam boum", false],
     ]
 }
